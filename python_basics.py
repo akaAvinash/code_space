@@ -11,4 +11,15 @@ def dimension_check(x,y,z,n):
         if x + y + z != n
     ]
 
-    print(result)
+#Find the runner-up score
+def runner_up(scores):
+    score = list(scores)
+    leader = score[0]
+    runner_up = None
+    for n in score[1:]:
+        if n > leader:
+            runner_up = leader
+            leader = n
+        elif n != leader and (runner_up is None or n > runner_up):
+            runner_up = n
+    return runner_up
