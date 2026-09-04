@@ -64,3 +64,8 @@ def process_commands(commands):
 
         elif command[0] == "reverse":
             my_list.reverse()
+
+# Tuple hash
+def tuple_hash(numbers):
+    my_tuple = tuple(numbers)
+    return hash(my_tuple)
