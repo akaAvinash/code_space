@@ -23,3 +23,16 @@ def runner_up(scores):
         elif n != leader and (runner_up is None or n > runner_up):
             runner_up = n
     return runner_up
+
+#print the name(s) of any student(s) having the second lowest grade.
+def students(records):
+    grades = sorted(set(record[1] for record in records))
+    second_lowest_grade = grades[1]
+
+    names = sorted(
+        record[0]
+        for record in records
+        if record[1] == second_lowest_grade
+    )
+
+    return names
